@@ -5,7 +5,7 @@
 
 bool cnes::initSDL2() {
   linfo<<"Initializing SDL2...\n";
-  
+
   if(SDL_Init(SDL_INIT_VIDEO) != 0) {
     lerror<<"Failed to initialize SDL2!\n";
     lerror<<SDL_GetError()<<"\n";
@@ -18,5 +18,7 @@ bool cnes::initSDL2() {
 }
 
 void cnes::quitSDL2() {
+  linfo<<"Quitting SDL2...\n";
   SDL_Quit();
+  linfo<<"SDL2 Quit\n";
 }

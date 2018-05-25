@@ -3,16 +3,19 @@
 namespace cnes {
   bool initSDL2();
   void quitSDL2();
-  
+
   class window {
     struct _sdlinfo;
     _sdlinfo* _sdl;
+    const char* _name;
   public:
     int x() const;
     int y() const;
 
     int width () const;
     int height() const;
+
+    const char* name() const;
 
     bool open(const char* name, unsigned width = 0, unsigned height = 0);
     void close();

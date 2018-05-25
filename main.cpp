@@ -15,7 +15,10 @@ int main(int argc, char *argv[]) {
     return 2;
   }
 
+  win.delay(1000);
+
+  win.close();
   cnes::quitSDL2();
-  
+
   return 0;
 }
